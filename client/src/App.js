@@ -29,7 +29,8 @@ class App extends React.Component {
         <ul>
           {
             Object.keys(this.state.bestShows).map((cur, idx) => (
-              <li>{cur} - {this.state.bestShows[cur]} </li>
+              cur === "_id" ? null : <li>{cur} - {this.state.bestShows[cur]}</li>
+              // <li>{cur} - {this.state.bestShows[cur]} </li>
             ))
           }
         </ul>
